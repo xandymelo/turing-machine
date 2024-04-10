@@ -34,8 +34,9 @@ class TuringMachine:
             if (self.current_state, current_symbol) not in self.transition_function:
                 print("Transição não definida para estado:", self.current_state, "e símbolo:", current_symbol)
                 return
+            print(self.current_state, current_symbol, "=>", end="")
             new_state, write_symbol, move_direction = self.transition_function[(self.current_state, current_symbol)]
-            print(self.transition_function[(self.current_state, current_symbol)])
+            print(new_state, write_symbol, move_direction)
             print("head position: " + str(self.head_position))
             self.current_state = new_state
             self.write(write_symbol)
@@ -43,8 +44,6 @@ class TuringMachine:
                 self.move_left()
             elif move_direction == 'R':
                 self.move_right()
-            print("tape: " + self.tape)
-            print("state: " + self.current_state)
             print("-----------------------------------------------------")
         print("Resultado:", self.tape)
 
