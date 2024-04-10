@@ -24,6 +24,10 @@ class TuringMachine:
 
     def run(self):
         while self.current_state not in self.final_states:
+            print(self.tape)
+            for i in range(self.head_position):
+                print(" ", end="")
+            print("^")
             current_symbol = self.read()
             if current_symbol == ' ':
                 current_symbol = '0'
