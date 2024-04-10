@@ -1,0 +1,156 @@
+nessa definição de unário + 1, onde o número natural x é definido por x+1 "uns", a estratégia que irei tomar é transformar os números em unário onde já temos a sequencia de passos de como multiplicar, e depois transformar o resultado no formato unário + 1 novamente.
+Passos para transformar o número de unário +1 para unário
+
+E1 - apenas sair na inércia
+E2 - Achar o final do primeiro número
+E3 - Tirar o último 1 do primeiro número
+E4 - achar o segundo 0
+E5 - colocar 1 na frente do primeiro numero
+E6 - achar o final do primeiro número
+E7 - Tirar o primeiro 1 do final do segundo numero
+E8 - Tirar o segundo 1 do final do segundo numero
+E9 - Passar pelo segundo número
+E10 - Ir para o início.
+
+
+E1 0 -> E2 0 R
+
+E2 1 > E2 1 R
+
+E2 1 > E2 1 R
+
+E2 1 > E2 1 R
+
+E2 0 -> E3 0 L
+
+E3 1 -> E4 0 R
+
+E4 0 -> E5 1 R
+
+E5 1 -> E5 1 R
+
+E5 1 -> E5 1 R
+
+E5 1 -> E5 1 R
+
+E5 1 -> E5 1 R
+
+E5 0 -> E6 0 L
+
+E6 1 -> E7 0 L
+
+E7 1 -> E8 0 L
+
+E8 1 -> E8 1 L
+
+E8 0 -> E9 0 L
+
+E9 1 -> E9 1 L
+
+E9 0 -> [seguir os passos da multiplicacao em unário]
+
+
+vamos testar:
+011101111
+x--------  E1
+
+E1 0 -> E2 0 R
+
+011101111
+-x------- E2
+
+E2 1 > E2 1 R
+
+011101111
+--x------ E2
+
+E2 1 > E2 1 R
+
+011101111
+---x----- E2
+
+E2 1 > E2 1 R
+
+011101111
+----x---- E2
+
+E2 0 -> E3 0 L
+
+011101111
+---x----- E3
+
+E3 1 -> E4 0 R
+
+011001111
+----x---- E4
+
+E4 0 -> E5 1 R
+
+011011111
+-----x--- E5
+
+E5 1 -> E5 1 R
+
+011011111
+------x-- E5
+
+E5 1 -> E5 1 R
+
+011011111
+-------x- E5
+
+E5 1 -> E5 1 R
+
+011011111
+--------x E5
+
+E5 1 -> E5 1 R
+
+0110111110
+---------x E5
+
+E5 0 -> E6 0 L
+
+0110111110
+--------x- E6
+
+E6 1 -> E7 0 L
+
+0110111100
+-------x-- E7
+
+E7 1 -> E8 0 L
+
+0110111000
+------x--- E8
+
+E8 1 -> E0 0 0
+
+Agora basta seguir os passos da multiplicação em unário feito na atividade anterior, vamos ter o resultado:
+
+01111110
+
+
+Como o processo de multiplicacao unário do slide tem 16 passos, e os passos anteriores tem 16 passos, no total atualmente temos
+26 passos, vamos definir os últimos.
+
+E27 - achar o final do número
+
+
+E27 1 -> E27 1 R
+
+E27 0 -> E28 0 L
+
+E28 1 -> E0 0 0
+
+
+
+
+
+
+
+
+
+
+
+
